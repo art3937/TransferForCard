@@ -22,7 +22,7 @@ fun transferMoney(
         return -1
     } else {
         commissionSize = when (card) {
-            "Mastercard" -> if (transferAmount > 75000)
+            "Mastercard" -> if (transferAmount + amountOfPreviousTransfers > 75000)
                 ((transferAmount - 75000) / 100 * 0.6 + 20).toInt() else 0
 
             "Мир" -> 0
