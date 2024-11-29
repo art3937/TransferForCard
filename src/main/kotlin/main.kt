@@ -35,6 +35,6 @@ fun toMastercard(transferAmount: Int,amountOfPreviousTransfers: Int): Int{
        (amountOfPreviousTransfers > 75000) -> (transferAmount / 100 * 0.6 + 20).toInt()
        (amountOfPreviousTransfers < 75000 && amountOfPreviousTransfers + transferAmount > 75000)
            -> ((amountOfPreviousTransfers + transferAmount - 75000)/ 100 * 0.6 + 20).toInt()
-       else -> 0
+       else -> 9999999
    }
 }
